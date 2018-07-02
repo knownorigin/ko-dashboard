@@ -11,7 +11,7 @@
         <td v-for="(column, index) in columns"
             :key="index"
             v-if="hasValue(item, column)">
-          {{itemValue(item, column)}}
+          <span v-html="itemValue(item, column)"></span>
         </td>
       </slot>
     </tr>
@@ -47,6 +47,10 @@
         return item[column] !== 'undefined';
       },
       itemValue (item, column) {
+        if (typeof item[column] === 'object') {
+
+          return Object.keys(item[column]).reduce((a, k) => `${a} ${k} <strong>${item[column][k]}</strong></br>`, '')
+        }
         return item[column];
       }
     }

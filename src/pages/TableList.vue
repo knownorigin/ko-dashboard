@@ -1,11 +1,9 @@
 <template>
   <div class="row">
     <div class="col-12">
-      <card title="Events" subTitle="All events in order">
+      <card title="All events in blockNumber order">
         <div slot="raw-content" class="table-responsive">
-          <paper-table :data="koEvents" :columns="['blockNumber', 'event', 'eventValues']" v-if="koEvents">
-
-          </paper-table>
+          <paper-table :data="koEvents" :columns="['blockNumber', 'event', 'eventValues']" v-if="koEvents"></paper-table>
         </div>
       </card>
     </div>
