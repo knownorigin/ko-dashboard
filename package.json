@@ -13,8 +13,10 @@
     "bootstrap": "^4.0.0",
     "chartist": "^0.11.0",
     "es6-promise": "^4.2.4",
-    "vue": "^2.5.13",
+    "firebase": "^5.2.0",
+    "vue": "^2.5.16",
     "vue-clickaway": "^2.1.0",
+    "vue-firestore": "^0.2.9",
     "vue-notifyjs": "^0.3.0",
     "vue-router": "^3.0.1"
   },

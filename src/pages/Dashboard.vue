@@ -3,17 +3,32 @@
 
     <!--Stats cards-->
     <div class="row">
-      <div class="col-md-6 col-xl-3" v-for="stats in statsCards" :key="stats.title">
+      <div class="col-md-6 col-xl-3">
         <stats-card>
-          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-            <i :class="stats.icon"></i>
+          <div class="icon-big icon-info text-center"  slot="header">
+            <i class="ti-server"></i>
           </div>
           <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
-            {{stats.value}}
+            <p>Total events</p>
+            {{ koEvents.length }}
           </div>
           <div class="stats" slot="footer">
-            <i :class="stats.footerIcon"></i> {{stats.footerText}}
+            <i class="ti-package"></i> from Ethereum Blockchain
+          </div>
+        </stats-card>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <stats-card>
+          <div class="icon-big icon-info text-center"  slot="header">
+            <i class="ti-server"></i>
+          </div>
+          <div class="numbers" slot="content">
+            <p>Total events</p>
+            {{ koEvents.length }}
+          </div>
+          <div class="stats" slot="footer">
+            <i class="ti-package"></i> from Ethereum Blockchain
           </div>
         </stats-card>
       </div>
@@ -75,23 +90,32 @@
 <script>
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from 'chartist';
+
+import { db } from '../firebase';
+
 export default {
   components: {
     StatsCard,
     ChartCard
+  },
+  firestore () {
+    return {
+      koEvents: db.collection('raw').doc('mainnet').collection('events')
+    }
   },
   /**
    * Chart data used to render stats, charts. Should be replaced with server data
    */
   data() {
     return {
+      koEvents: [],
       statsCards: [
         {
           type: "warning",
           icon: "ti-server",
-          title: "Capacity",
-          value: "105GB",
-          footerText: "Updated now",
+          title: "Events",
+          value: "",
+          footerText: "from Blockchain",
           footerIcon: "ti-reload"
         },
         {

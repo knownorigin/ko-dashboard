@@ -19,38 +19,38 @@
   </table>
 </template>
 <script>
-export default {
-  name: 'paper-table',
-  props: {
-    columns: Array,
-    data: Array,
-    type: {
-      type: String, // striped | hover
-      default: "striped"
+  export default {
+    name: 'paper-table',
+    props: {
+      columns: Array,
+      data: Array,
+      type: {
+        type: String, // striped | hover
+        default: 'striped'
+      },
+      title: {
+        type: String,
+        default: ''
+      },
+      subTitle: {
+        type: String,
+        default: ''
+      }
     },
-    title: {
-      type: String,
-      default: ""
+    computed: {
+      tableClass () {
+        return `table-${this.type}`;
+      }
     },
-    subTitle: {
-      type: String,
-      default: ""
+    methods: {
+      hasValue (item, column) {
+        return item[column] !== 'undefined';
+      },
+      itemValue (item, column) {
+        return item[column];
+      }
     }
-  },
-  computed: {
-    tableClass() {
-      return `table-${this.type}`;
-    }
-  },
-  methods: {
-    hasValue(item, column) {
-      return item[column.toLowerCase()] !== "undefined";
-    },
-    itemValue(item, column) {
-      return item[column.toLowerCase()];
-    }
-  }
-};
+  };
 </script>
 <style>
 </style>
