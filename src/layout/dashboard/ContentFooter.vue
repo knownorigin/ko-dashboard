@@ -1,14 +1,8 @@
 <template>
   <footer class="footer">
     <div class="container-fluid d-flex flex-wrap justify-content-between">
-      <nav>
-        <ul>
-          <li>
-            <router-link :to="{path:'/admin'}">Dashboard</router-link>
-          </li>
-        </ul>
-      </nav>
       <div class="copyright d-flex flex-wrap">
+        <a href="www.blockrocket.tech" target="_blank">BlockRocket</a>
       </div>
     </div>
   </footer>

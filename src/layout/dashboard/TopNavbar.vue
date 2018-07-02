@@ -11,20 +11,20 @@
         <span class="navbar-toggler-bar"></span>
         <span class="navbar-toggler-bar"></span>
       </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <drop-down class="nav-item"
-                     title="5 Notifications"
-                     title-classes="nav-link"
-                     icon="ti-bell">
-            <a class="dropdown-item" href="#">Notification 1</a>
-            <a class="dropdown-item" href="#">Notification 2</a>
-            <a class="dropdown-item" href="#">Notification 3</a>
-            <a class="dropdown-item" href="#">Notification 4</a>
-            <a class="dropdown-item" href="#">Another notification</a>
-          </drop-down>
-        </ul>
-      </div>
+      <!--<div class="collapse navbar-collapse">-->
+        <!--<ul class="navbar-nav ml-auto">-->
+          <!--<drop-down class="nav-item"-->
+                     <!--title="5 Notifications"-->
+                     <!--title-classes="nav-link"-->
+                     <!--icon="ti-bell">-->
+            <!--<a class="dropdown-item" href="#">Notification 1</a>-->
+            <!--<a class="dropdown-item" href="#">Notification 2</a>-->
+            <!--<a class="dropdown-item" href="#">Notification 3</a>-->
+            <!--<a class="dropdown-item" href="#">Notification 4</a>-->
+            <!--<a class="dropdown-item" href="#">Another notification</a>-->
+          <!--</drop-down>-->
+        <!--</ul>-->
+      <!--</div>-->
     </div>
   </nav>
 </template>
