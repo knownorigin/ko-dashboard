@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container-fluid d-flex flex-wrap justify-content-between">
       <div class="copyright d-flex flex-wrap">
-        <a href="www.blockrocket.tech" target="_blank">BlockRocket</a>
+        <a href="http://www.blockrocket.tech" target="_blank">Built by BlockRocket.tech</a>
       </div>
     </div>
   </footer>

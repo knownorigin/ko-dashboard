@@ -2,7 +2,7 @@
   <table class="table" :class="tableClass">
     <thead>
     <slot name="columns">
-      <th v-for="column in columns" :key="column">{{column}}</th>
+      <th v-for="column in columns" :key="column">{{ column }}</th>
     </slot>
     </thead>
     <tbody>
@@ -48,7 +48,6 @@
       },
       itemValue (item, column) {
         if (typeof item[column] === 'object') {
-
           return Object.keys(item[column]).reduce((a, k) => `${a} ${k} <strong>${item[column][k]}</strong></br>`, '')
         }
         return item[column];

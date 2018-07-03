@@ -69,7 +69,7 @@
             <i class="ti-direction"></i>
           </div>
           <div class="numbers" slot="content" v-if="koEvents.length">
-            <p>Native Transfers</p>
+            <p>Transfers</p>
             {{ nativeTransfer }}
           </div>
         </stats-card>
